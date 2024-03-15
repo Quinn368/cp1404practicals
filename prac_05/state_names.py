@@ -21,5 +21,5 @@ while True:
     except KeyError:
         print("Invalid short state")
 
-# for code in CODE_TO_NAME:
-#     print(f"{code} is {CODE_TO_NAME[code]}")
+for code in CODE_TO_NAME:
+    print(f"{code} is {CODE_TO_NAME[code]}")

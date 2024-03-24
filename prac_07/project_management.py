@@ -37,8 +37,7 @@ def main():
 def load_projects():
     """Load the project details."""
     projects = []
-    in_file = open("projects.txt", 'r')  # load file directly without asking user input
-    # in_file = open(FILENAME, 'r')
+    in_file = open(FILENAME, 'r')  # load file directly without asking user input
     in_file.readline()
     for line in in_file:
         parts = line.strip().split('\t')
@@ -49,7 +48,9 @@ def load_projects():
 
 def save_projects(projects):
     """Save the project details"""
-    with open(FILENAME, 'w') as out_file:
+    # save_filename == input("Filename: ")
+    # with open(save_filename, 'w') as out_file:
+    with open(FILENAME, 'w') as out_file:  # load file directly without asking user input
         print("Name\tStart Date\tPriority\tCost Estimate\tCompletion Percentage", file=out_file)
         for project in projects:
             out_file.write(project.line_format() + '\n')
